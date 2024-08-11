@@ -16,7 +16,7 @@ def pedido_numero(operador):
     
 
 
-presentacion = """Bienvenidos a la calculadora
+presentacion = """Bienvenidos a la calculadora 
 para salir escribe salir
 Las operaciones son suma, resta, multi, div"""
 
@@ -26,35 +26,39 @@ operacion = ""
 resultado = 0
 numero = 0
 
-while operacion != "salir":
 
-    if numero == 0:
-        numero = int(input("Ingresa número: "))
+try:
+    while operacion != "salir":
 
-    operacion = input("Ingresa Operación: ").lower()
+        if numero == 0:
+            numero = int(input("Ingresa número: "))
 
-    if operacion != "salir":
-        siguiente_numero = int(input("Ingresa siguiente número: "))
-    
-    
-    if operacion == "suma":
-        print("El resultado es ",pedido_numero(operacion))
-        numero = pedido_numero(operacion)
-    elif operacion == "resta":
-        print("El resultado es ",pedido_numero(operacion))
-        numero = pedido_numero(operacion)
-    elif operacion == "multi":
-        print("El resultado es ",pedido_numero(operacion))
-        numero = pedido_numero(operacion)
-    elif operacion == "div":
-        print("El resultado es ",pedido_numero(operacion))
-        numero = pedido_numero(operacion)
-    else:
+        operacion = input("Ingresa Operación: ").lower()
 
-        if operacion == "salir":
-            print("========Finalizado=======")
+        if operacion != "salir":
+            siguiente_numero = int(input("Ingresa siguiente número: "))
+        
+        
+        if operacion == "suma":
+            print("El resultado es ",pedido_numero(operacion))
+            numero = pedido_numero(operacion)
+        elif operacion == "resta":
+            print("El resultado es ",pedido_numero(operacion))
+            numero = pedido_numero(operacion)
+        elif operacion == "multi":
+            print("El resultado es ",pedido_numero(operacion))
+            numero = pedido_numero(operacion)
+        elif operacion == "div":
+            print("El resultado es ",pedido_numero(operacion))
+            numero = pedido_numero(operacion)
         else:
-            print("Operación no válida")
+
+            if operacion == "salir":
+                print("========Finalizado=======")
+            else:
+                print("Operación no válida")
+except:
+    print("Valor ingresados no válido")                
 
 
    
